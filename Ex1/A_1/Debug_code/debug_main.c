@@ -37,7 +37,7 @@ void bug2()
     for (int i = 0; i < 5; i++)
     {
         results[i] = square_root(squares[i]);
-        if (results[i] * results[i] != (float)squares[i]) // Cast squares[i] to compare float to float.
+        if ((results[i] * results[i] - (float)squares[i]) > 0.0001) // Cast squares[i] to compare float to float.
         {
             printf("Something went wrong with square root!\n");
         }
