@@ -1,4 +1,3 @@
-#include <math.h>
 #include "advmath.h"
 
 float power(int a,int b){

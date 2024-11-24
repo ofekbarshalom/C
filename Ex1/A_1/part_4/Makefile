@@ -2,7 +2,7 @@ program: main.o libadvmath.so
 	gcc main.o -L. -ladvmath -o program
 
 libadvmath.so: advmath.o
-	gcc -shared -o libadvmath.so advmath.o -lm
+	gcc -shared -o libadvmath.so advmath.o
 
 advmath.o: advmath.c advmath.h
 	gcc -fPIC -c advmath.c
