@@ -20,10 +20,11 @@ void bug1()
     int sum = 0;
     double runningAvg = 0;
 
-    for (int i = 0; i <= 6; i++)
+    // Correct loop condition to avoid out of bounds error.
+    for (int i = 0; i < 6; i++)
     {
         sum = sum + numbers[i];
-        runningAvg = sum / 1 + i;
+        runningAvg = (double)sum / (1 + i); // Cast sum to get the avg on double, added ().
         printf("After adding %d: sum = %d, average = %.2f\n",
                numbers[i], sum, runningAvg);
     }
@@ -36,8 +37,7 @@ void bug2()
     for (int i = 0; i < 5; i++)
     {
         results[i] = square_root(squares[i]);
-        if (results[i] * results[i] != squares[i])
-
+        if (results[i] * results[i] != (float)squares[i]) // Cast squares[i] to compare float to float.
         {
             printf("Something went wrong with square root!\n");
         }
@@ -45,7 +45,7 @@ void bug2()
 }
 void bug3()
 {
-    unsigned int i = 10;
+    int i = 10; // made int signed
     while (i >= 0)
     {
         i--;
