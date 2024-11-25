@@ -8,7 +8,6 @@ Welcome to the **C Projects** repository! This collection features various proje
 - [Projects](#projects)
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
-- [Contributing](#contributing)
 - [License](#license)
 
 ---
@@ -29,7 +28,7 @@ Here are some of the projects included in this repository:
 - A C Compiler: GCC or any other standard C compiler installed on your system.
 - Make Utility: Understanding of Makefile usage to build projects efficiently.
 - Text Editor or IDE: Tools like VS Code, Vim, or Code::Blocks to edit and debug code.
-
+  
 ## Getting Started
 
 To get started with these projects, you can clone this repository to your local machine:
