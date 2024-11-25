@@ -8,7 +8,7 @@ Welcome to the **C Projects** repository! This collection features various proje
 - [Projects](#projects)
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
-- [License](#license)
+- [License](#LICENSE)
 
 ---
 
