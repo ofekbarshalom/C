@@ -8,7 +8,7 @@ Welcome to the **C Projects** repository! This collection features various proje
 - [Projects](#projects)
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
-- [License](#LICENSE)
+- [License](#License)
 
 ---
 
@@ -28,6 +28,10 @@ Here are some of the projects included in this repository:
 - A C Compiler: GCC or any other standard C compiler installed on your system.
 - Make Utility: Understanding of Makefile usage to build projects efficiently.
 - Text Editor or IDE: Tools like VS Code, Vim, or Code::Blocks to edit and debug code.
+
+## License
+
+This repository is licensed under the [MIT License](LICENSE). See the `LICENSE` file for more details.
   
 ## Getting Started
 
