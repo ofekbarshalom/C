@@ -38,7 +38,7 @@ This repository is licensed under the [MIT License](LICENSE). See the `LICENSE` 
 To get started with these projects, you can clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/YourUsername/c_projects.git
+git clone https://github.com/ofekbarshalom/c_projects.git
 
 
 
