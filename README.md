@@ -8,7 +8,6 @@ Welcome to the **C Projects** repository! This collection features various proje
 - [Projects](#projects)
 - [Getting Started](#getting-started)
 - [Prerequisites](#prerequisites)
-- [How to Run](#how-to-run)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -16,21 +15,20 @@ Welcome to the **C Projects** repository! This collection features various proje
 
 ## About
 
-This repository serves as a portfolio of C programming projects I have worked on. It covers topics ranging from basic syntax and operations to advanced topics like data structures, algorithms, and system-level programming.
+This repository serves as a portfolio of C programming projects I have worked on. It covers basic syntax and operations to advanced topics like system-level programming and Makefiles.
 
 ## Projects
 
 Here are some of the projects included in this repository:
 
-1. **Hello World**: A basic program to get started with C.
-2. **Calculator**: A simple calculator for arithmetic operations.
-3. **Sorting Algorithms**: Implementations of bubble sort, quick sort, and merge sort.
-4. **Linked List**: Operations on a singly/doubly linked list.
-5. **File Handling**: Examples of reading from and writing to files.
-6. **Memory Management**: Demonstrates usage of `malloc`, `calloc`, `realloc`, and `free`.
-7. **Game**: A simple command-line game (e.g., Tic-Tac-Toe or Snake).
+1. **Ex1**: A basic exercise that works on the fundamentals of C and how to compile a program using Makefile.
 
-> **Note**: The list above is just an example. Please update it with the actual projects in your repository.
+## prerequisites
+- Basic Knowledge of C Programming: Familiarity with C syntax, control structures, and functions.
+- Linux Basics: Knowledge of basic Linux commands and working in a terminal environment.
+- A C Compiler: GCC or any other standard C compiler installed on your system.
+- Make Utility: Understanding of Makefile usage to build projects efficiently.
+- Text Editor or IDE: Tools like VS Code, Vim, or Code::Blocks to edit and debug code.
 
 ## Getting Started
 
@@ -38,4 +36,6 @@ To get started with these projects, you can clone this repository to your local 
 
 ```bash
 git clone https://github.com/YourUsername/c_projects.git
+
+
 
