@@ -34,24 +34,22 @@ void magicMatrixCheck(int n, int mat[n][n]){
     }
 
     // Check sum of the main diagonal
-    int diagSum = 0;
-    for(int i = 0; i < n; i++){
-        for(int i = 0; i < n; i++){
-            if(i == j){diagSum += mat[i][j];}
-        }
+    int diagSum1 = 0;
+    for(i = 0; i < n; i++) {
+        diagSum1 += mat[i][i];
     }
-    if(diagSum != sum){
-        printf("The given Matrix is not a magic.\n");
+    if(diagSum1 != sum) {
+        printf("The given Matrix is NOT a magic square.\n");
         return;
     }
 
     // Check sum of the secondary diagonal
     int diagSum2 = 0;
-    for (i = 0; i < n; i++) {
+    for(i = 0; i < n; i++) {
         diagSum2 += mat[i][n - 1 - i];
     }
-    if (diagSum2 != sum) {
-        printf("The matrix is NOT a magic square.\n");
+    if(diagSum2 != sum) {
+        printf("The given Matrix is NOT a magic square.\n");
         return;
     }
 
@@ -61,11 +59,14 @@ void magicMatrixCheck(int n, int mat[n][n]){
 
 int main(){
     int n;
-    int mat[n][n];
+
     printf("Enter the size of the matrix: \n");
     scanf("%d", &n);
 
+    int mat[n][n];
+
     // Input the matrix elements
+    printf("Enter the matrix numbers: \n");
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
             scanf("%d", &mat[i][j]);
@@ -82,7 +83,7 @@ int main(){
         printf("\n");
     }
 
-    magicMatrixCheck(mat,n);
+    magicMatrixCheck(n,mat);
 
     return 0;
 }
