@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define N 5
+#define N 50
 
 void read_grades(int grade[]){
     int sum = 0;
