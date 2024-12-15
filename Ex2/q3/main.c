@@ -29,10 +29,7 @@ int main() {
     printf("Enter numbers to fill the matrix:\n");
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            if (scanf("%d", &mat[i][j]) != 1) {
-                printf("Invalid input. Please enter integers only.\n");
-                return 1;
-            }
+            scanf("%d", &mat[i][j]);
         }
     }
 
