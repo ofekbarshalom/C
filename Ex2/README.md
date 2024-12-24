@@ -47,53 +47,9 @@ This project contains solutions to various programming tasks implemented in the 
 - **C Compiler**: GCC or any other standard C compiler.
 - **Make Utility**: For building the project.
 
-## Project Structure
-
-```
-|-- main.c              # Entry point of the program
-|-- functions.c         # Contains all the function implementations
-|-- functions.h         # Header file with function declarations
-|-- Makefile            # Build script for the project
-```
-
-## Running the Program
-
-1. **Build the project**:
-   ```bash
-   make
-   ```
-
-2. **Run the program**:
-   ```bash
-   ./main
-   ```
-
-3. **Program Interaction**:
-   - The program will present a menu to the user with the list of questions.
-   - Enter the number corresponding to the question to execute its functionality.
-
-## Testing
-
-- Test the program by providing various inputs for each question.
-- Ensure the outputs match the requirements outlined in the assignment.
-
-## Notes
-
-- The program assumes valid user input.
-- The `Makefile` automates the build process, ensuring all dependencies are compiled properly.
-- Modular design ensures code is organized and easy to maintain.
-
-## Additional Resources
-
-- Refer to the assignment PDF for detailed explanations of each question.
-- Use the `Makefile` to clean the build directory:
-  ```bash
-  make clean
-  ```
-
 ## Authors
 
-This project was completed as part of the System Programming course (Assignment 2). It showcases proficiency in pointers, memory management, and algorithm implementation in C.
+This project was completed as part of the System Programming course (Assignment 2).
 
 ## License
 
