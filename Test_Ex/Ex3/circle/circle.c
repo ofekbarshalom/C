@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-#define PI 3.146
+#define PI 3.14
 #define RADIUS 3.5
 
 void compute(){
