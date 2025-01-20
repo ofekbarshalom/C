@@ -19,7 +19,7 @@ int main(){
     printf("Enter the exponent and the base:");
     if (scanf("%d%d", &exp, &base) != 2){
         printf("Error!");
-        return 1;
+        return 0;
     }
     int result = power(exp, base);
 
