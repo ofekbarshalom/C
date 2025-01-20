@@ -1,0 +1,1 @@
+int countLoops(int num);
