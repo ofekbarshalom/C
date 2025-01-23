@@ -189,10 +189,79 @@ int knapsack(int values[], int weights[], int sackSize, int isSelected[]){
     return totleValue;
 }
 
+int sizeCheck(void* p1, void* p2, int size){
+    int sizeOf =  ((char*)p2 - (char*)p1) / size + 1;
+    printf("The subarray size between the two given pointers is: %d", sizeOf);
+}
+
+void numCheck(int arr[],int size, int target){
+    int left = 0;
+    int right = size - 1;
+
+    while(left < right){
+        if(arr[left] + arr[right] == target){
+            printf("Number %d at index %d and number %d at index %d sum is %d as required", arr[left], left, arr[right], right, target);
+            return;
+        }
+
+        if(arr[left] + arr[right] < target){
+            left++;
+        }
+        else {
+            right --;
+        }
+    }
+
+    printf("No such numbers exist in the given array");
+}
+
+int looper(int arr[], int size){
+    int loopArr[size];
+
+    for(int i = 0; i < size; i++){
+        loopArr[i] = 0;
+    }
+
+    int i = 0;
+
+    while(i < size && i >= 0){
+        if(loopArr[i] == 1){
+            return i;
+        }
+        loopArr[i] = 1;
+        i += arr[i];
+    }
+
+    return -1;
+}
+
+bool isContained(int A[], int n, int B[], int m, int **start, int **end){
+    for(int i = 0; i <= n - m; i++){
+            bool match = true;
+        for(int j = 0; j < m; j++){
+            if(A[i + j] != B[j]){
+                match = false;
+                break;
+            }
+
+            if(match){
+                *start = &A[i];
+                *end = &A[i + m - 1];
+                return true;
+            }
+        }
+    }
+
+    *start = NULL;
+    *end = NULL;
+    return false;
+}
+
+
 int main(){
-    int qnumber = 5;
+    int qnumber = 10;
     
-    switch (qnumber)
+    switch(qnumber)
     {
     case 1:
         q1();
@@ -244,6 +313,42 @@ int main(){
         }
 
         FloydWarshall(arr3, start, end);
+    
+    case 7:
+        int arr7[5];
+        
+        int size = sizeof(int);
+        void* p1 = &arr7[2];
+        void* p2 = &arr7[4];
+
+        sizeCheck(p1, p2, size);
+    
+    case 8:
+        int arr8[5] = {1,2,3,4,5};
+        numCheck(arr8, 5, 6);
+    
+    case 9:
+        int size1 = 5;
+        int arr9[] = {3,2,0,1,-3};
+        int loopStart = looper(arr9, size1);
+        printf("The loop start at index %d", loopStart);
+
+    case 10:
+        int n = 7;
+        int m = 3;
+        int A[] = {0,1,2,3,4,5,6};
+        int B[] = {3,4,5};
+
+        int* start1 = NULL;
+        int* end1 = NULL;
+
+        bool isContain = isContained(A, n, B, m, &start1, &end1);
+
+        if(isContain){
+            printf("true");
+        } else {
+            printf("false");
+        }
 
     default:
         break;
