@@ -7,4 +7,4 @@ main.o: main.c
 	gcc -Wall  -c main.c -o main.o
 
 clean:
-	rm -f main.o main
+	rm -f main.o main.exe
