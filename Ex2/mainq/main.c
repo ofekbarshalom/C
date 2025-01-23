@@ -150,7 +150,43 @@ void FloydWarshall(int dist[N][N], int start, int end){
 }
 
 int knapsack(int values[], int weights[], int sackSize, int isSelected[]){
-    
+    int dp[N + 1][sackSize + 1];
+    int i, w;
+
+    for(i = 0; i <= N; i++){
+        for(w = 0; w <= sackSize; w++){
+            dp[i][w] = 0;
+        }
+    }
+
+    for(i = 1; i <= N; i++){
+        for(w = 0; w <= sackSize; w++){
+            if(weights[i - 1] <= w){
+                if( values[i - 1] + dp[i - 1][w - weights[i - 1]] > dp[i - 1][w]){
+                    dp[i][w] = dp[i - 1][w];
+                }
+                else{
+                    dp[i][w] = dp[i - 1][w];
+                }
+            } else {
+                dp[i][w] = dp[i - 1][w];
+            }
+        }
+    }
+
+    int totleValue = dp[N][sackSize];
+    w = sackSize;
+
+    for(i = N; i > 0; i++){
+        if (dp[i][w] != dp[i - 1][w]){
+            isSelected[i - 1] = 1;
+            w -= weights[i - 1];
+        } else {
+            isSelected[i - 1] = 0;
+        }
+    }
+
+    return totleValue;
 }
 
 int main(){
