@@ -3,19 +3,6 @@
 #include <stdbool.h>
 #define N 3
 
-// int[][] initMatrix(){
-//     int arr[N][N];
-
-//     printf("Enter a matrix:\n");
-//         for(int i = 0; i < N; i++){
-//             for(int j = 0; j < N; j++){
-//                 scanf("%d", &arr[i][j]);
-//             }
-//             printf("\n");
-//         }
-//     return arr;
-// }
-
 void q1(){
     int grades[N];
     int grade;
@@ -144,8 +131,30 @@ void MagicCheck(int arr[N][N]){
     }
 }
 
+void FloydWarshall(int dist[N][N], int start, int end){
+    for(int k = 0; k < N; k++){
+        for(int i = 0; i < N; i++){
+            for(int j = 0; j < N; j++){
+                if(dist[i][k] != 0 && dist[k][j] != 0 &&
+                dist[i][j] > dist[i][k] + dist[k][j]){
+                    dist[i][j] = dist[i][k] + dist[k][j];
+                }
+            }
+        }
+    }
+    if(dist[start][end] == 0){
+        printf("There is no path between node %d and node %d.\n", start, end);
+    } else {
+        printf("The shortest path weight between node %d and node %d is: %d\n", start, end, dist[start][end]);
+    }
+}
+
+int knapsack(int values[], int weights[], int sackSize, int isSelected[]){
+    
+}
+
 int main(){
-    int qnumber = 4;
+    int qnumber = 5;
     
     switch (qnumber)
     {
@@ -185,6 +194,20 @@ int main(){
         }
 
         MagicCheck(arr2);
+    
+    case 5:
+        int arr3[N][N];
+        int start = 0;
+        int end = 2;
+        printf("Enter a matrix:\n");
+        for(int i = 0; i < N; i++){
+            for(int j = 0; j < N; j++){
+                scanf("%d", &arr3[i][j]);
+            }
+            printf("\n");
+        }
+
+        FloydWarshall(arr3, start, end);
 
     default:
         break;
