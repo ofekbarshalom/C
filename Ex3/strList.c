@@ -231,3 +231,52 @@ StrList* StrList_clone(const StrList* Strlist){
     return newList;
 }
 
+void StrList_reverse( StrList* StrList){
+    Node* current = StrList->head;
+    Node* pre = NULL;
+    Node* next = NULL;
+
+    while(current){
+        next = current ->next;
+        current -> next = pre;
+
+        pre = current;
+        current = next;
+    }
+    StrList->head = pre;
+}
+
+void StrList_sort(StrList* StrList){
+    int changes = 1;
+    while(changes){
+        changes = 0;
+        Node *curr = StrList->head;
+        while(curr->next){
+            if(strcmp(curr->data, curr->next->data)){
+                changes = 1;
+                char *temp = (char *) malloc(sizeof(char) * (strlen(curr->data) + 1));
+                strcpy(temp, curr->data);
+                curr->data = realloc(curr->data,sizeof(char) * (strlen(curr->next->data) + 1));
+                strcpy(curr->data, curr->next->data);
+                curr->next->data = realloc(curr->next->data,sizeof(char) * (strlen(temp) + 1));
+                strcpy(curr->next->data, temp);
+                free(temp);
+            }
+
+            curr = curr->next;
+        }
+    }
+}
+
+int StrList_isSorted(StrList* StrList){
+    Node* p = StrList->head;
+    if(p == NULL) return 1;
+    
+    while(p->next){
+        if(strcmp(p->data, p->next->data) > 0){
+            return 0;
+        }
+        p = (*p).next;
+    }
+    return 1;
+}
