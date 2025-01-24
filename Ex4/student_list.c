@@ -73,7 +73,7 @@ int removeStudent(StudentListHandle list, int id){
 }
 
 int findStudent(StudentListHandle list, int id, char* outName){
-    if(list == NULL) return;
+    if(list == NULL) return 0;
 
     Student* current = list->head;
 
