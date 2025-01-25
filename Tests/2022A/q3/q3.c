@@ -76,6 +76,17 @@ Node* reverseList(Node* list){
     return prev;
 }
 
+Node* freeList(Node* list){
+    Node* current = list;
+    Node* temp;
+
+    while(current){
+        temp = current->next;
+        free(current);
+        current = temp;
+    }
+}
+
 int main(){
     Node* head = CreateNode(1);
 
