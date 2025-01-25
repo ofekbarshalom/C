@@ -3,8 +3,8 @@
 CC = gcc
 TARGET = Project
 CFALGS = -c -Wall -Werror
-OBJ = q1.o
-C_FILE = q1.c
+OBJ = q3.o
+C_FILE = q3.c
 
 all: $(TARGET)
 
