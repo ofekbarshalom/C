@@ -1,6 +1,9 @@
+#ifndef Q4_H
+#define Q4_H
+
 typedef struct AdptArray_* PAdptArray;
 
-typedef enum Result {FAIL = 0, SUCCESS};
+typedef enum Result {FAIL = 0, SUCCESS} Result;
 
 typedef void* PElement;
 
@@ -17,3 +20,5 @@ Result SetAdptArrayAt(PAdptArray, int, PElement);
 PElement GetAdptArrayAt(PAdptArray, int);
 
 int GetAdptArraySize(PAdptArray);
+
+#endif
