@@ -10,5 +10,6 @@ printf("sizeof(double) = %zu\n",sizeof(double));
 //Other types:
 printf("sizeof(void*) = %zu\n",sizeof(void*));
 printf("sizeof(long double)= %zu\n",sizeof(long double));
+printf("sizeof(unsigned int)= %zu\n",sizeof(unsigned int));
 return 0;
 } 
