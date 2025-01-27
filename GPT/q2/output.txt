@@ -1,0 +1,2 @@
+This is a test
+Let's count characters and read it.
