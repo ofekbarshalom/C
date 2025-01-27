@@ -6,6 +6,7 @@ void copyString(char *src, char *dst, int len){
     for (int i = 0; i < len; i++) {
         dst[i] = src[i];
     }
+    dst[len] = '\0'; // Ensure null-termination
 }
 
 int main(){
