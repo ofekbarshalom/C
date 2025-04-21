@@ -1,0 +1,9 @@
+char* m[7]
+
+sizeof(m) = 8 * sizeof(char) = 32;
+sizeif(*m) = 4;
+
+char (*m)[7];
+
+sizeof(m) = 4;
+sizeof(*m) = 4;
