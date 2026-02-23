@@ -1,44 +1,36 @@
 # C Projects
 
-Welcome to the **C Projects** repository! This collection features various projects and programs written in the C programming language, showcasing fundamental concepts, algorithms, and more advanced implementations.
-
-## Table of Contents
-
-- [About](#about)
-- [Projects](#projects)
-- [Getting Started](#getting-started)
-- [Prerequisites](#prerequisites)
-- [License](#License)
-
----
+Welcome to the **C Projects** repository. This collection includes C exercises and mini-projects focused on core programming skills, data structures, and build workflows.
 
 ## About
 
-This repository serves as a portfolio of C programming projects I have worked on. It covers basic syntax and operations to advanced topics like system-level programming and Makefiles.
+This repository is a personal C programming portfolio, from fundamentals to linked-list implementations and multi-file projects.
 
 ## Projects
 
-Here are some of the projects included in this repository:
+- **Fundamentals**: Intro C exercises, debugging practice, and Makefile-based builds.
+- **Algorithms-basics**: Problem-solving exercises and algorithm-oriented C practice.
+- **Strings-linked-list**: A linked-list library for handling strings in C.
+- **Students-linked-list**: A linked-list implementation for student records.
 
-1. **Ex1**: A basic exercise that works on the fundamentals of C and how to compile a program using Makefile.
+## Prerequisites
 
-## prerequisites
-- Basic Knowledge of C Programming: Familiarity with C syntax, control structures, and functions.
-- Linux Basics: Knowledge of basic Linux commands and working in a terminal environment.
-- A C Compiler: GCC or any other standard C compiler installed on your system.
-- Make Utility: Understanding of Makefile usage to build projects efficiently.
-- Text Editor or IDE: Tools like VS Code, Vim, or Code::Blocks to edit and debug code.
+- Basic C programming knowledge
+- GCC (or another C compiler)
+- `make`
+- Terminal environment (Linux/macOS shell, Git Bash, or WSL on Windows)
 
-## License
-
-This repository is licensed under the [MIT License](LICENSE). See the `LICENSE` file for more details.
-  
 ## Getting Started
 
-To get started with these projects, you can clone this repository to your local machine:
+Clone the repository:
 
 ```bash
 git clone https://github.com/ofekbarshalom/c_projects.git
+cd c_projects
+```
 
+Then enter any project folder and build using its local `makefile`.
 
+## License
 
+This repository is licensed under the [MIT License](LICENSE).
