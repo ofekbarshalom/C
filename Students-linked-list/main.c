@@ -7,7 +7,7 @@ int main(){
 
     // Add Students
     char* name = "ofek";
-    int id = 324161421;
+    int id = 111111111;
     addStudent(list, name, id);
 
     name = "roy";

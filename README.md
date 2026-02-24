@@ -20,17 +20,6 @@ This repository is a personal C programming portfolio, from fundamentals to link
 - `make`
 - Terminal environment (Linux/macOS shell, Git Bash, or WSL on Windows)
 
-## Getting Started
-
-Clone the repository:
-
-```bash
-git clone https://github.com/ofekbarshalom/c_projects.git
-cd c_projects
-```
-
-Then enter any project folder and build using its local `makefile`.
-
 ## License
 
 This repository is licensed under the [MIT License](LICENSE).
